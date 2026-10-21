@@ -1,0 +1,1 @@
+const fs=require('fs'),path=require('path');for(const [name,data] of Object.entries(require('./site.json'))){const dest=path.join('dist',name);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,Buffer.from(data,'base64'));}
